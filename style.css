@@ -11,80 +11,82 @@ body {
 .container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   min-height: 100vh;
   padding: 20px;
 }
 
 .contenido {
-  background: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  border-radius: 16px;
-  max-width: 360px;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 18px;
+  border-radius: 18px;
+  max-width: 95vw;
+  width: 360px;
   text-align: center;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
   position: relative;
   z-index: 1;
 }
 
 h1 {
-  font-size: 2.2em;
+  font-size: 1.9em;
   margin: 0;
-  color: #FF4081; /* rosa brillante */
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  color: #ec407a;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 h2 {
-  font-size: 1.4em;
-  margin-top: 8px;
-  color: #FF9100; /* naranja alegre */
+  font-size: 1.2em;
+  margin-top: 5px;
+  color: #ff9800;
 }
 
 .intro {
-  margin: 18px 0 5px;
+  margin: 14px 0 6px;
   font-weight: bold;
-  color: #4A148C; /* púrpura intenso */
-  font-size: 1.2em;
+  color: #6a1b9a;
+  font-size: 1.1em;
 }
 
 .texto {
-  font-size: 1em;
+  font-size: 0.95em;
   margin-bottom: 20px;
-  color: #444;
+  color: #333;
 }
 
 .texto strong {
-  color: #D50000; /* rojo fuerte */
+  color: #d32f2f;
 }
 
 .tattoo {
   width: 100%;
-  margin-bottom: 15px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 12px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .firma {
-  margin-top: 10px;
+  margin-top: 12px;
   font-style: italic;
   font-weight: bold;
-  color: #C2185B;
+  color: #c2185b;
 }
 
 .logo {
-  width: 120px;
-  margin-top: 25px;
-  opacity: 0.9;
+  width: 110px;
+  margin-top: 20px;
+  opacity: 0.85;
 }
 
-/* 🎉 Emojis flotantes */
+/* 🎉 Emojis flotantes móviles */
 .emoji {
   position: fixed;
-  top: -50px;
-  font-size: 24px;
-  animation: fall 5s linear infinite;
+  top: -40px;
+  font-size: 20px;
+  animation: fall 4s linear infinite;
   z-index: 0;
-  opacity: 0.8;
+  opacity: 0.75;
+  pointer-events: none;
 }
 
 @keyframes fall {
