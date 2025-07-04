@@ -121,3 +121,28 @@ h2 {
   color: #ff9800;
   font-size: 1.5em;
 }
+/* 🔴 Animación de palpitación */
+@keyframes latido {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+.palpita {
+  animation: latido 1.6s ease-in-out infinite;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.rosa {
+  color: #ec407a;
+  font-size: 2.2em;
+}
+
+.naranja {
+  color: #ff9800;
+  font-size: 1.5em;
+  margin-top: 8px;
+}
