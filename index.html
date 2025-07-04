@@ -1,99 +1,43 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Helvetica Neue', sans-serif;
-  background: linear-gradient(135deg, #fce4ec, #e0f7fa, #f3e5f5);
-  color: #222;
-  overflow-x: hidden;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Regalo para Antonio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="contenido">
+      <h1>Antonio</h1>
+      <h2>¡Feliz 39 cumpleaños!</h2>
+      <p class="intro">Un regalo para toda la vida</p>
+      <p class="texto">
+        Aunque las agujas den respeto...<br />
+        este regalo nace del amor más profundo:<br />
+        <strong>NUESTROS HIJOS</strong>.
+      </p>
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  min-height: 100vh;
-  padding: 20px;
-}
+      <img class="tattoo" src="tatuaje2_resized.png" alt="Tatuaje huellas" />
+      <img class="tattoo" src="tatuaje1_resized.png" alt="Tatuaje Jimena" />
 
-.contenido {
-  background: rgba(255, 255, 255, 0.92);
-  padding: 18px;
-  border-radius: 18px;
-  max-width: 95vw;
-  width: 360px;
-  text-align: center;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
-  position: relative;
-  z-index: 1;
-}
+      <p class="firma">Con todo mi amor ❤️</p>
 
-h1 {
-  font-size: 1.9em;
-  margin: 0;
-  color: #ec407a;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-}
+      <img class="logo" src="belitattoo_logo.jpg" alt="Belitattoo logo" />
+    </div>
+  </div>
 
-h2 {
-  font-size: 1.2em;
-  margin-top: 5px;
-  color: #ff9800;
-}
-
-.intro {
-  margin: 14px 0 6px;
-  font-weight: bold;
-  color: #6a1b9a;
-  font-size: 1.1em;
-}
-
-.texto {
-  font-size: 0.95em;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.texto strong {
-  color: #d32f2f;
-}
-
-.tattoo {
-  width: 100%;
-  margin-bottom: 12px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-
-.firma {
-  margin-top: 12px;
-  font-style: italic;
-  font-weight: bold;
-  color: #c2185b;
-}
-
-.logo {
-  width: 110px;
-  margin-top: 20px;
-  opacity: 0.85;
-}
-
-/* 🎉 Emojis flotantes móviles */
-.emoji {
-  position: fixed;
-  top: -40px;
-  font-size: 20px;
-  animation: fall 4s linear infinite;
-  z-index: 0;
-  opacity: 0.75;
-  pointer-events: none;
-}
-
-@keyframes fall {
-  0% {
-    transform: translateY(0) rotate(0deg);
-  }
-  100% {
-    transform: translateY(110vh) rotate(360deg);
-    opacity: 0;
-  }
-}
+  <!-- 🎉 Emojis flotando -->
+  <script>
+    const emojis = ["❤️", "💋", "🎉"];
+    for (let i = 0; i < 30; i++) {
+      const emoji = document.createElement("div");
+      emoji.classList.add("emoji");
+      emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      emoji.style.left = Math.random() * 100 + "vw";
+      emoji.style.animationDuration = 3 + Math.random() * 2 + "s";
+      document.body.appendChild(emoji);
+    }
+  </script>
+</body>
+</html>
