@@ -16,15 +16,18 @@ body {
 }
 
 .contenido {
-  background: rgba(255, 255, 255, 0.2); /* más transparente */
+  background: rgba(255, 255, 255, 0.05); /* casi totalmente transparente */
+  backdrop-filter: blur(4px); /* difumina ligeramente el fondo debajo */
+  -webkit-backdrop-filter: blur(4px); /* soporte Safari */
   padding: 18px;
   border-radius: 18px;
   max-width: 95vw;
   width: 360px;
   text-align: center;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* sombra suave */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 1;
+
 }
 
 h1 {
