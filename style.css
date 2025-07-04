@@ -5,6 +5,8 @@ body {
   background: linear-gradient(135deg, #fce4ec, #e0f7fa, #f3e5f5);
   color: #222;
   overflow-x: hidden;
+  position: relative; /* NECESARIO para z-index en emojis */
+  z-index: 0;
 }
 
 .container {
@@ -13,73 +15,30 @@ body {
   align-items: start;
   min-height: 100vh;
   padding: 20px;
+  position: relative; /* Añadido para controlar z-index */
+  z-index: 1;
 }
 
 .contenido {
-  background: transparent; /* ✅ totalmente transparente */
+  background: transparent !important; /* ✅ realmente transparente */
+  box-shadow: none !important;
   padding: 18px;
   border-radius: 18px;
   max-width: 95vw;
   width: 360px;
   text-align: center;
   position: relative;
-  z-index: 1;
-  box-shadow: none;
+  z-index: 2; /* por debajo de los emojis */
 }
 
-h1 {
-  margin: 0;
-}
-
-h2 {
-  margin-top: 8px;
-}
-
-.intro {
-  margin: 14px 0 6px;
-  font-weight: bold;
-  color: #6a1b9a;
-  font-size: 1.1em;
-}
-
-.texto {
-  font-size: 0.95em;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.texto strong {
-  color: #d32f2f;
-}
-
-.tattoo {
-  width: 100%;
-  margin-bottom: 12px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-
-.firma {
-  margin-top: 12px;
-  font-style: italic;
-  font-weight: bold;
-  color: #c2185b;
-}
-
-.logo {
-  width: 110px;
-  margin-top: 20px;
-  opacity: 0.85;
-}
-
-/* 🎉 Emojis flotantes móviles */
+/* Emojis encima de todo */
 .emoji {
   position: fixed;
   top: -40px;
-  font-size: 20px;
+  font-size: 22px;
   animation: fall 4s linear infinite;
-  z-index: 9999; /* ✅ por encima de todo */
-  opacity: 0.75;
+  z-index: 99999; /* Asegurado por encima de todo */
+  opacity: 0.85;
   pointer-events: none;
 }
 
@@ -93,14 +52,10 @@ h2 {
   }
 }
 
-/* 🔴 Animación de palpitación */
+/* Animación latido */
 @keyframes latido {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.08);
-  }
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
 }
 
 .palpita {
@@ -108,7 +63,6 @@ h2 {
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-/* Colores personalizados para títulos */
 .rosa {
   color: #ec407a;
   font-size: 2.2em;
@@ -119,3 +73,5 @@ h2 {
   font-size: 1.5em;
   margin-top: 8px;
 }
+
+/* Resto igual (intro, texto, firma, etc.) */
