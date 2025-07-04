@@ -16,7 +16,7 @@ body {
 }
 
 .contenido {
-  background: transparent;
+  background: transparent; /* ✅ totalmente transparente */
   padding: 18px;
   border-radius: 18px;
   max-width: 95vw;
@@ -24,7 +24,7 @@ body {
   text-align: center;
   position: relative;
   z-index: 1;
-
+  box-shadow: none;
 }
 
 h1 {
@@ -78,7 +78,7 @@ h2 {
   top: -40px;
   font-size: 20px;
   animation: fall 4s linear infinite;
-  z-index: 0;
+  z-index: 9999; /* ✅ por encima de todo */
   opacity: 0.75;
   pointer-events: none;
 }
@@ -109,30 +109,6 @@ h2 {
 }
 
 /* Colores personalizados para títulos */
-.rosa {
-  color: #ec407a;
-  font-size: 2.2em;
-}
-
-.naranja {
-  color: #ff9800;
-  font-size: 1.5em;
-}
-/* 🔴 Animación de palpitación */
-@keyframes latido {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.08);
-  }
-}
-
-.palpita {
-  animation: latido 1.6s ease-in-out infinite;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-}
-
 .rosa {
   color: #ec407a;
   font-size: 2.2em;
