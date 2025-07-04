@@ -12,15 +12,32 @@
       <h1>Antonio</h1>
       <h2>¡Feliz 39 cumpleaños!</h2>
       <p class="intro">Un regalo para toda la vida</p>
-      <p class="texto">Aunque las agujas den respeto...<br>este regalo nace del amor más profundo:<br><strong>nuestros hijos</strong>.</p>
+      <p class="texto">
+        Aunque las agujas den respeto...<br />
+        este regalo nace del amor más profundo:<br />
+        <strong>nuestros hijos</strong>.
+      </p>
 
-      <img class="tattoo" src="tatuaje1_resized.png" alt="Tatuaje Jimena" />
       <img class="tattoo" src="tatuaje2_resized.png" alt="Tatuaje huellas" />
+      <img class="tattoo" src="tatuaje1_resized.png" alt="Tatuaje Jimena" />
 
       <p class="firma">Con todo mi amor ❤️</p>
 
       <img class="logo" src="belitattoo_logo.jpg" alt="Belitattoo logo" />
     </div>
   </div>
+
+  <!-- 🎉 Emojis flotando -->
+  <script>
+    const emojis = ["❤️", "💋", "🎉"];
+    for (let i = 0; i < 30; i++) {
+      const emoji = document.createElement("div");
+      emoji.classList.add("emoji");
+      emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      emoji.style.left = Math.random() * 100 + "vw";
+      emoji.style.animationDuration = 3 + Math.random() * 2 + "s";
+      document.body.appendChild(emoji);
+    }
+  </script>
 </body>
 </html>
