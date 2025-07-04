@@ -2,9 +2,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Helvetica Neue', sans-serif;
-  background: url('background.jpg') no-repeat center center fixed;
+  background: url('background_pastel.jpg') no-repeat center center fixed;
   background-size: cover;
-  color: #333;
+  color: #222;
+  overflow-x: hidden;
 }
 
 .container {
@@ -16,28 +17,34 @@ body {
 }
 
 .contenido {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.8);
   padding: 20px;
-  border-radius: 12px;
-  max-width: 340px;
+  border-radius: 16px;
+  max-width: 360px;
   text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1;
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 2.2em;
   margin: 0;
-  color: #222;
+  color: #FF4081; /* rosa brillante */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 h2 {
-  font-size: 1.2em;
-  margin-top: 5px;
-  color: #555;
+  font-size: 1.4em;
+  margin-top: 8px;
+  color: #FF9100; /* naranja alegre */
 }
 
 .intro {
-  margin: 15px 0 5px;
+  margin: 18px 0 5px;
   font-weight: bold;
+  color: #4A148C; /* púrpura intenso */
+  font-size: 1.2em;
 }
 
 .texto {
@@ -46,21 +53,46 @@ h2 {
   color: #444;
 }
 
+.texto strong {
+  color: #D50000; /* rojo fuerte */
+}
+
 .tattoo {
   width: 100%;
   margin-bottom: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .firma {
   margin-top: 10px;
   font-style: italic;
-  color: #a34d4d;
+  font-weight: bold;
+  color: #C2185B;
 }
 
 .logo {
   width: 120px;
   margin-top: 25px;
+  opacity: 0.9;
+}
+
+/* 🎉 Emojis flotantes */
+.emoji {
+  position: fixed;
+  top: -50px;
+  font-size: 24px;
+  animation: fall 5s linear infinite;
+  z-index: 0;
   opacity: 0.8;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
 }
